@@ -56,7 +56,8 @@ fmEmpl.addEventListener('submit', (e) => {
     $("id").focus();
 
     // INCREMENENT THE NUMBER OF EMPLOYEES IN THE TABLE
-    valCounter.value=counter+1;
+    counter+=1;
+    valCounter.value=counter;
     valCounter.className="text-muted";
 
 })
@@ -67,7 +68,8 @@ tblEmpl.addEventListener('click', (e) =>{
     if(e.target.parentElement.cellIndex==5){
         if (confirm('Are you sure you want to delete this employee?')){
             tblEmpl.deleteRow(e.target.parentElement.parentElement.rowIndex);
-            valCounter.value=counter-1;
+            counter-=1;
+            valCounter.value=counter;
         }
     }
 })
